@@ -18,49 +18,37 @@ public class User {
 	private String name;
 	private String email;
 	private String password;
-	
+
 	@ManyToMany
 	@JoinTable
 	private List<Role> roles;
-	
-	@OneToMany(mappedBy="user")
+
+	@OneToMany(mappedBy = "user")
 	private List<Blog> blogs;
 
 	public Integer getId() {
 		return id;
 	}
 
-
-
 	public List<Blog> getBlogs() {
 		return blogs;
 	}
-
-
 
 	public void setBlogs(List<Blog> blogs) {
 		this.blogs = blogs;
 	}
 
-
-
 	public List<Role> getRoles() {
 		return roles;
 	}
-
-
 
 	public void setRoles(List<Role> roles) {
 		this.roles = roles;
 	}
 
-
-
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
-
 
 	public String getName() {
 		return name;
@@ -85,7 +73,5 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
-	
+
 }
