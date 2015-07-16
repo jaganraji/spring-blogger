@@ -16,6 +16,7 @@ import com.jagan.jba.repository.ItemRepository;
 import com.jagan.jba.repository.UserRepository;
 
 @Service
+@Transactional
 public class UserService {
 
 	@Autowired
@@ -45,6 +46,11 @@ public class UserService {
 		}
 		user.setBlogs(blogs);
 		return user;
+	}
+
+	public void save(User user) {
+		userRepository.save(user);
+		
 	}
 
 }
