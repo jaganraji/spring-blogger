@@ -8,6 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.CascadeType;
+
+
 
 @Entity
 public class User {
@@ -24,7 +27,7 @@ public class User {
 	@JoinTable
 	private List<Role> roles;
 
-	@OneToMany(mappedBy = "user")
+	@OneToMany(mappedBy = "user", cascade=CascadeType.REMOVE)
 	private List<Blog> blogs;
 
 	public Integer getId() {
