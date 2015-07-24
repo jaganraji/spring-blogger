@@ -10,6 +10,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 
+import org.hibernate.annotations.Type;
+
+
+
 @Entity
 public class Item {
 	@Id
@@ -17,7 +21,9 @@ public class Item {
 	private Integer id;
 	
 	private String title;
+	
 	@Lob
+	@Type(type="org.hibernate.type.StringClobType")
 	@Column(length = 10000, name = "style")
 	private String description;
 	
