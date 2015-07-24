@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -16,7 +17,8 @@ public class Item {
 	private Integer id;
 	
 	private String title;
-	
+	@Lob
+	@Column(length = 10000, name = "style")
 	private String description;
 	
 	@Column(name="published_date")
