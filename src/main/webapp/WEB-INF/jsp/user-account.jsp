@@ -107,8 +107,8 @@
 				<table class="table table-striped table-bordered table-hover">
 					<thead>
 						<tr>
-							<th>Title</th>
-							<th>Link</th>
+							<th>date</th>
+							<th>item</th>
 						</tr>
 					</thead>
 					<tbody>
